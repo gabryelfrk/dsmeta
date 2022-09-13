@@ -1,11 +1,17 @@
-import BotaoDeNotificacao from "./components/BotaoDeNotificacao"
+import Header from "./components/Header"
+import CartaoDeVendas from "./components/CartaoDeVendas"
 
 function App() {
   return (
     <>
-      <h1>Olá mundo!</h1>
-      <BotaoDeNotificacao />
-      <BotaoDeNotificacao />
+      <Header />
+      <main>
+        <section id="sales">
+          <div className="dsmeta-container">
+            <CartaoDeVendas />
+          </div>
+        </section>
+      </main>
     </>
 
   )
