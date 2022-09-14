@@ -1,5 +1,5 @@
-import icone from '../../assets/img/icone-notificacao.svg'
-import './styles.css'
+import icone from '../../assets/img/icone-notificacao.svg';
+import './styles.css';
 
 function BotaoDeNotificacao() {
     return (
@@ -10,4 +10,4 @@ function BotaoDeNotificacao() {
     )
 }
 
-export default BotaoDeNotificacao
+export default BotaoDeNotificacao;
