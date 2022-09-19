@@ -2,7 +2,8 @@ import BotaoDeNotificacao from '../BotaoDeNotificacao';
 import './styles.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function CartaoDeVendas() {
 
@@ -11,6 +12,13 @@ function CartaoDeVendas() {
 
   const [dataMin, setDataMin] = useState(min);
   const [dataMax, setDataMax] = useState(max);
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/vendas")
+      .then(response => { // Promise
+        console.log(response.data);
+      })
+  }, [])
 
   return (
     <div className="dsmeta-card">
