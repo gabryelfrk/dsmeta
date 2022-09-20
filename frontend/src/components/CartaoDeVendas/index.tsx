@@ -17,12 +17,15 @@ function CartaoDeVendas() {
 
   const [vendas, setVendas] = useState<Venda[]>([]);
 
+  const dmin = dataMin.toISOString().slice(0, 10);
+  const dmax = dataMax.toISOString().slice(0, 10);
+
   useEffect(() => {
-    axios.get(`${BASE_URL}/vendas`)
+    axios.get(`${BASE_URL}/vendas?dataMin=${dmin}&dataMax=${dmax}`)
       .then(response => { // Promise
         setVendas(response.data.content);
       })
-  }, [])
+  }, [dataMin, dataMax]);
 
   return (
     <div className="dsmeta-card">
