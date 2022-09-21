@@ -73,7 +73,7 @@ function CartaoDeVendas() {
                   <td>R$ {venda.total.toFixed(2)}</td>
                   <td>
                     <div className="dsmeta-red-btn-container">
-                      <BotaoDeNotificacao />
+                      <BotaoDeNotificacao vendaId={venda.id} />
                     </div>
                   </td>
                 </tr>
