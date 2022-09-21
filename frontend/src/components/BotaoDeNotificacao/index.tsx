@@ -10,12 +10,12 @@ type Props = {
 
 function handleClick(id: number) {
     axios(`${BASE_URL}/vendas/${id}/notificacao`)
-    .then(response => {
-        toast.info("SMS enviado com sucesso");
-    });
+        .then(response => {
+            toast.info("SMS enviado com sucesso");
+        });
 }
 
-function BotaoDeNotificacao( {vendaId}: Props ) {
+function BotaoDeNotificacao({ vendaId }: Props) {
     return (
 
         <div className="dsmeta-red-btn" onClick={() => handleClick(vendaId)}>
